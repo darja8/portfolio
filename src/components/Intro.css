@@ -1,0 +1,165 @@
+.intro-section {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+    overflow: hidden;
+    background: linear-gradient(135deg, #5e6472, #aed9e0, #5e6472);
+    color: white;
+  }
+  
+  /* Glow behind everything */
+  .intro-bg-glow {
+    position: absolute;
+    top: 33%;
+    left: 50%;
+    width: 600px;
+    height: 600px;
+    background: linear-gradient(to right, #3b82f6, #22d3ee, #9333ea);
+    opacity: 0.1;
+    filter: blur(160px);
+    animation: pulseGlow 5s ease-in-out infinite alternate;
+    z-index: -2; /* back layer */
+  }
+  
+  @keyframes pulseGlow {
+    0% { opacity: 0.1; transform: translateX(-50%) scale(0.95); }
+    100% { opacity: 0.25; transform: translateX(-50%) scale(1.05); }
+  }
+  
+
+
+  
+  /* Name */
+  .intro-name {
+    font-size: clamp(3rem, 8vw, 6rem);
+    font-weight: 800;
+    letter-spacing: -1px;
+    background: linear-gradient(90deg, #3d3d3d, #9a9a9a, #343434);
+    -webkit-background-clip: text;
+    color: transparent;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Description */
+  .intro-description {
+    margin-top: 1.5rem;
+    font-size: 1.125rem;
+    line-height: 1.6;
+    max-width: 600px;
+    color: #9ca3af;
+  }
+  
+  .intro-description span.cyan { color: #22d3ee; }
+  .intro-description span.blue { color: #3b82f6; }
+  .intro-description span.purple { color: #9333ea; }
+  
+  /* Scroll indicator */
+  .scroll-indicator {
+    position: absolute;
+    bottom: 2.5rem;
+    color: #6b7280;
+    font-size: 0.875rem;
+    letter-spacing: 0.15em;
+    animation: bounceScroll 2s infinite ease-in-out;
+  }
+  
+  @keyframes bounceScroll {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(8px); }
+  }
+  
+  .intro-section {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* start at top instead of center */
+  align-items: center;
+  min-height: 100vh;
+  text-align: center;
+  overflow: hidden;
+  padding-top: 10vh; /* some space from top */
+  background: linear-gradient(135deg, #5e6472, #aed9e0, #5e6472);
+  color: white;
+}
+
+/* Position the blob absolutely behind text */
+svg {
+  /* position: absolute; */
+  top: 20%; /* moves it toward top */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 600px;
+  height: 600px;
+  z-index: -1; /* behind text */
+}
+
+.intro-section {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+    overflow: hidden;
+    padding-top: 15vh; /* move text down */
+    background: linear-gradient(135deg, #5e6472, #aed9e0, #5e6472);
+    color: white;
+  }
+
+  
+  /* Name */
+  .intro-name {
+    font-size: clamp(3rem, 8vw, 6rem);
+    font-weight: 800;
+    letter-spacing: -1px;
+    background: linear-gradient(90deg, #3d3d3d, #9a9a9a, #343434);
+    -webkit-background-clip: text;
+    color: transparent;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Description */
+  .intro-description {
+    margin-top: 1.5rem;
+    font-size: 1.125rem;
+    line-height: 1.6;
+    max-width: 600px;
+    color: #9ca3af;
+  }
+  
+  .intro-description span.cyan { color: #22d3ee; }
+  .intro-description span.blue { color: #3b82f6; }
+  .intro-description span.purple { color: #9333ea; }
+  
+  /* Scroll indicator */
+  .scroll-indicator {
+    position: absolute;
+    bottom: 2.5rem;
+    color: #6b7280;
+    font-size: 0.875rem;
+    letter-spacing: 0.15em;
+    animation: bounceScroll 2s infinite ease-in-out;
+  }
+  
+  @keyframes bounceScroll {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(8px); }
+  }
+  
+  /* Blob positioning */
+.intro-blob {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 500px;
+    height: 500px;
+    z-index: -1;    /* behind text */
+    opacity: 0.6;   /* semi-transparent */
+  }
+  
