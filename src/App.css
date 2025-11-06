@@ -1,3 +1,4 @@
+@import "./index.css";
 
 .app {
   width: 100%;
@@ -5,12 +6,21 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #111;
+  background: var(--color-bg-deep);
   position: relative;
+  overflow: hidden;
   overflow: hidden;
 }
 
-/* Blob positioning */
+html, body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  background: var(--color-bg-deep);
+  overflow-x: hidden;
+  overflow-y: auto; 
+}
+
 .intro-blob {
   position: absolute;
   top: 50%;
@@ -20,14 +30,33 @@
 
 .intro-name {
   position: absolute;
-  transform: translate(-52%, -50%); /* tweak X here */
+  transform: translate(-52%, -50%); 
   color: white;
   font-size: clamp(3rem, 8vw, 6rem);
   text-align: center;
-  text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+  text-shadow: 0 0 20px var(--color-bg-deep);
   pointer-events: none;
   font-family: "Playfair Display", serif;
   font-optical-sizing: auto;
   font-weight: 800;
   font-style: normal;
+}
+
+
+/* Scroll arrow */
+.scroll-arrow {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2rem;
+  color: var(--color-white);
+  cursor: pointer;
+  animation: bounce 2s infinite;
+  opacity: 0.8;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50% { transform: translateX(-50%) translateY(10px); }
 }

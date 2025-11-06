@@ -11,3 +11,42 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+:root {
+  /* === Primary (Pink) === */
+  --color-primary-dark: #d85d86;
+  --color-primary: #f2709c;
+  --color-primary-light: #f89bb8;
+  --color-primary-xlight: #fbc2d3;
+  --color-primary-warm: #ffa67a;
+  --color-primary-sunset: #ff8a54;
+
+  /* === Secondary (Mint Green) === */
+  --color-secondary-dark: #4dd76b;
+  --color-secondary: #64ff86;
+  --color-secondary-light: #8cffaa;
+  --color-secondary-xlight: #c3ffd2;
+
+  /* === Neutrals & Whites === */
+  --color-text-dark: #1e1e1e;
+  --color-text-mid: #555555;
+  --color-gray-light: #e0e0e0;
+  --color-offwhite: #fafafa;
+  --color-white: #ffffff;
+
+  /* === Dark Background Palette (Neutral Charcoal) === */
+  --color-bg-deep: #0f1115;
+  --color-bg-dark: #181b20;
+  --color-bg-mid: #22262d;
+  --color-bg-accent: #2e333b;
+  --color-bg-soft: #3b414a;
+  
+  /* === Utility Colors === */
+  --color-warning: #ffc658;
+  --color-info: #6ec8ff;
+  --color-success: var(--color-secondary);
+  --color-error: #ff6b6b;
+
+  /* === Gradient === */
+  --gradient-primary: linear-gradient(135deg, #f2709c 0%, #64ff86 100%);
+}

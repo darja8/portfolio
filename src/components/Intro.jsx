@@ -1,35 +1,43 @@
-// import { motion } from "framer-motion";
-// import "./Intro.css";
-// import AnimatedBlob from "./AnimatedBlob";
+export default function Intro() {
+  const sectionRef = useRef(null);
+  const textRef = useRef(null);
+  const photoRef = useRef(null);
 
-// const Intro = () => {
-//   return (
-//     <section className="intro-section">
-//       {/* Background Blob */}
-//       <AnimatedBlob />
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+    const el = sectionRef.current;
 
-//       {/* Foreground Text */}
-//       <motion.h1
-//         initial={{ opacity: 0, y: 40 }}
-//         animate={{ opacity: 1, y: 0 }}
-//         transition={{ duration: 1 }}
-//         className="intro-name"
-//       >
-//         Daria Skrzypczak
-//       </motion.h1>
+    gsap.fromTo(
+      textRef.current,
+      { x: -100, opacity: 0 },
+      {
+        x: 0,
+        opacity: 1,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: el,
+          start: "top 80%",
+          end: "top 60%",
+          scrub: true,
+        },
+      }
+    );
 
-//       <motion.p
-//         initial={{ opacity: 0, y: 20 }}
-//         animate={{ opacity: 1, y: 0 }}
-//         transition={{ delay: 0.4, duration: 1 }}
-//         className="intro-description"
-//       >
-//         Crafting <span className="cyan">next-gen</span> digital experiences with{" "}
-//         <span className="blue">React</span>,{" "}
-//         <span className="purple">TypeScript</span> & modern web tech.
-//       </motion.p>
-//     </section>
-//   );
-// };
+    gsap.fromTo(
+      photoRef.current,
+      { x: 100, opacity: 0 },
+      {
+        x: 0,
+        opacity: 1,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: el,
+          start: "top 80%",
+          end: "top 60%",
+          scrub: true,
+        },
+      }
+    );
+  }, []);
+}
 
-// export default Intro;
